@@ -99,6 +99,16 @@ int main(){
             cout << "\nO's turn: ";
 
         cin >> x >> y;
+        
+        if(x < 0 || x > 2 || y < 0 || y > 3){
+            cout << "Please enter indexes in range {0,1,2} that are space separated.\n";
+            continue;
+        }
+        else if (grid[x][y] != '.'){
+            cout << "Choose an empty box!\n";
+            continue;
+        }
+        
 
         grid[x][y] = turn ? 'X' : 'O';
 
