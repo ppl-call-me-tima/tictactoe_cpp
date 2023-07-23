@@ -23,6 +23,7 @@ void show(char grid[3][3]){
     }
 }
 
+
 bool checkRows(char grid[3][3]){
     for (int i=0; i<3; i++){
         char ini = grid[i][0];
