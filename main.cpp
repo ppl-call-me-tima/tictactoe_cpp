@@ -69,6 +69,21 @@ bool checkDiag(char grid[3][3]){
             return 1;
         }
     }
+    for (int i=0; i<3; i++){
+        char ini = grid[0][2];
+        if (ini == '.') break;
+
+        for (int j=0; j<3; j++){
+            if (i+j == 2){
+                if (grid[i][j] != ini){
+                    break;
+                }
+            }
+            else if (i == 2){
+                return 1;
+            }
+        }
+    }
     return 0;
 }
 
